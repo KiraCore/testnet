@@ -1,0 +1,2 @@
+# testnet
+KIRA Public Testnet
