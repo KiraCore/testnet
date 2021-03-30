@@ -1,0 +1,386 @@
+{
+  "genesis_time": "2021-03-29T19:40:53.392736076Z",
+  "chain_id": "testnet-1",
+  "initial_height": "1",
+  "consensus_params": {
+    "block": {
+      "max_bytes": "22020096",
+      "max_gas": "-1",
+      "time_iota_ms": "1000"
+    },
+    "evidence": {
+      "max_age_num_blocks": "100000",
+      "max_age_duration": "172800000000000",
+      "max_bytes": "1048576"
+    },
+    "validator": {
+      "pub_key_types": [
+        "ed25519"
+      ]
+    },
+    "version": {}
+  },
+  "app_hash": "",
+  "app_state": {
+    "auth": {
+      "params": {
+        "max_memo_characters": "256",
+        "tx_sig_limit": "7",
+        "tx_size_cost_per_byte": "10",
+        "sig_verify_cost_ed25519": "590",
+        "sig_verify_cost_secp256k1": "1000"
+      },
+      "accounts": [
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "kira128dl6r3crnkzd6fn3f4qnjqgaq2ze704g2f6kh",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "kira1klyvrkyrnvc6w7hqc4ktzqh9pphhpxy9whyjed",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "kira1h4kzzkw3h5uaxckl0c08955lyvzp2gytak9ad5",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        },
+        {
+          "@type": "/cosmos.auth.v1beta1.BaseAccount",
+          "address": "kira1arn6lr665jfrjm6k7zxx5y2a0m5fcjj3lkem6e",
+          "pub_key": null,
+          "account_number": "0",
+          "sequence": "0"
+        }
+      ]
+    },
+    "bank": {
+      "params": {
+        "send_enabled": [],
+        "default_send_enabled": true
+      },
+      "balances": [
+        {
+          "address": "kira128dl6r3crnkzd6fn3f4qnjqgaq2ze704g2f6kh",
+          "coins": [
+            {
+              "denom": "samolean",
+              "amount": "2000000000000000000000000000"
+            },
+            {
+              "denom": "test",
+              "amount": "29999780000000000"
+            },
+            {
+              "denom": "ukex",
+              "amount": "299998800000000"
+            }
+          ]
+        },
+        {
+          "address": "kira1klyvrkyrnvc6w7hqc4ktzqh9pphhpxy9whyjed",
+          "coins": [
+            {
+              "denom": "test",
+              "amount": "10000000000"
+            },
+            {
+              "denom": "ukex",
+              "amount": "100000000"
+            }
+          ]
+        },
+        {
+          "address": "kira1h4kzzkw3h5uaxckl0c08955lyvzp2gytak9ad5",
+          "coins": [
+            {
+              "denom": "test",
+              "amount": "10000000000"
+            },
+            {
+              "denom": "ukex",
+              "amount": "100000000"
+            }
+          ]
+        },
+        {
+          "address": "kira1arn6lr665jfrjm6k7zxx5y2a0m5fcjj3lkem6e",
+          "coins": [
+            {
+              "denom": "samolean",
+              "amount": "3000000000000000000000000000"
+            },
+            {
+              "denom": "test",
+              "amount": "200000000000"
+            },
+            {
+              "denom": "ukex",
+              "amount": "1000000000"
+            }
+          ]
+        }
+      ],
+      "supply": [],
+      "denom_metadata": []
+    },
+    "customevidence": {
+      "evidence": []
+    },
+    "customgov": {
+      "starting_proposal_id": "1",
+      "permissions": {
+        "1": {
+          "blacklist": [],
+          "whitelist": [
+            1,
+            3,
+            2,
+            4,
+            5,
+            12,
+            13,
+            10,
+            11,
+            14,
+            15,
+            18,
+            19,
+            9,
+            20,
+            22,
+            23,
+            24,
+            25
+          ]
+        },
+        "2": {
+          "blacklist": [],
+          "whitelist": [
+            2
+          ]
+        }
+      },
+      "network_actors": [
+        {
+          "address": "kira128dl6r3crnkzd6fn3f4qnjqgaq2ze704g2f6kh",
+          "roles": [
+            "1"
+          ],
+          "status": "ACTIVE",
+          "votes": [
+            "VOTE_OPTION_YES",
+            "VOTE_OPTION_ABSTAIN",
+            "VOTE_OPTION_NO",
+            "VOTE_OPTION_NO_WITH_VETO"
+          ],
+          "permissions": {
+            "blacklist": [],
+            "whitelist": []
+          },
+          "skin": "1"
+        }
+      ],
+      "network_properties": {
+        "min_tx_fee": "100",
+        "max_tx_fee": "1000000",
+        "vote_quorum": "33",
+        "proposal_end_time": "600",
+        "proposal_enactment_time": "300",
+        "enable_foreign_fee_payments": true,
+        "mischance_rank_decrease_amount": "10",
+        "inactive_rank_decrease_percent": "50",
+        "min_validators": "1",
+        "poor_network_max_bank_send": "1000000",
+        "jail_max_time": "10",
+        "enable_token_whitelist": false,
+        "enable_token_blacklist": true
+      },
+      "execution_fees": [
+        {
+          "name": "Claim Validator Seat",
+          "transaction_type": "claim-validator-seat",
+          "execution_fee": "10",
+          "failure_fee": "1",
+          "timeout": "10",
+          "default_parameters": "0"
+        },
+        {
+          "name": "Claim Governance Seat",
+          "transaction_type": "claim-governance-seat",
+          "execution_fee": "10",
+          "failure_fee": "1",
+          "timeout": "10",
+          "default_parameters": "0"
+        },
+        {
+          "name": "Claim Proposal Type X",
+          "transaction_type": "claim-proposal-type-x",
+          "execution_fee": "10",
+          "failure_fee": "1",
+          "timeout": "10",
+          "default_parameters": "0"
+        },
+        {
+          "name": "Vote Proposal Type X",
+          "transaction_type": "vote-proposal-type-x",
+          "execution_fee": "10",
+          "failure_fee": "1",
+          "timeout": "10",
+          "default_parameters": "0"
+        },
+        {
+          "name": "Submit Proposal Type X",
+          "transaction_type": "submit-proposal-type-x",
+          "execution_fee": "10",
+          "failure_fee": "1",
+          "timeout": "10",
+          "default_parameters": "0"
+        },
+        {
+          "name": "Veto Proposal Type X",
+          "transaction_type": "veto-proposal-type-x",
+          "execution_fee": "10",
+          "failure_fee": "1",
+          "timeout": "10",
+          "default_parameters": "0"
+        },
+        {
+          "name": "Upsert Token Alias Execution Fee",
+          "transaction_type": "upsert-token-alias",
+          "execution_fee": "10",
+          "failure_fee": "1",
+          "timeout": "10",
+          "default_parameters": "0"
+        },
+        {
+          "name": "Activate a validator",
+          "transaction_type": "activate",
+          "execution_fee": "100",
+          "failure_fee": "1000",
+          "timeout": "10",
+          "default_parameters": "0"
+        },
+        {
+          "name": "Pause a validator",
+          "transaction_type": "pause",
+          "execution_fee": "10",
+          "failure_fee": "100",
+          "timeout": "10",
+          "default_parameters": "0"
+        },
+        {
+          "name": "Unpause a validator",
+          "transaction_type": "unpause",
+          "execution_fee": "10",
+          "failure_fee": "100",
+          "timeout": "10",
+          "default_parameters": "0"
+        }
+      ],
+      "poor_network_messages": {
+        "messages": [
+          "proposal-assign-permission",
+          "proposal-set-network-property",
+          "set-network-properties",
+          "vote-proposal",
+          "claim-councilor",
+          "whitelist-permissions",
+          "blacklist-permissions",
+          "create-role",
+          "assign-role",
+          "remove-role",
+          "whitelist-role-permission",
+          "blacklist-role-permission",
+          "remove-whitelist-role-permission",
+          "remove-blacklist-role-permission",
+          "claim-validator",
+          "activate",
+          "pause",
+          "unpause"
+        ]
+      },
+      "poor_network_max_bank_send": "0"
+    },
+    "customslashing": {
+      "params": {
+        "signed_blocks_window": "100",
+        "min_signed_per_window": "0.500000000000000000",
+        "downtime_inactive_duration": "600s"
+      },
+      "signing_infos": [],
+      "missed_blocks": []
+    },
+    "customstaking": {
+      "validators": [
+        {
+          "moniker": "GENESIS VALIDATOR",
+          "website": "",
+          "social": "social",
+          "identity": "",
+          "commission": "1.000000000000000000",
+          "val_key": "kiravaloper128dl6r3crnkzd6fn3f4qnjqgaq2ze704mv4ewm",
+          "pub_key": {
+            "@type": "/cosmos.crypto.ed25519.PubKey",
+            "key": "9xR78jcudkonZC1pjIHL57bTZKH+cEuzpjvwj/wXXX0="
+          },
+          "status": "ACTIVE",
+          "rank": "0",
+          "streak": "0"
+        }
+      ]
+    },
+    "feeprocessing": {},
+    "genutil": {
+      "gen_txs": []
+    },
+    "params": null,
+    "tokens": {
+      "aliases": {
+        "KEX": {
+          "symbol": "KEX",
+          "name": "Kira",
+          "icon": "",
+          "decimals": 6,
+          "denoms": [
+            "ukex",
+            "mkex"
+          ]
+        }
+      },
+      "rates": {
+        "ubtc": {
+          "denom": "ubtc",
+          "rate": "10.000000000000000000",
+          "fee_payments": true
+        },
+        "ukex": {
+          "denom": "ukex",
+          "rate": "1.000000000000000000",
+          "fee_payments": true
+        },
+        "xeth": {
+          "denom": "xeth",
+          "rate": "0.100000000000000000",
+          "fee_payments": true
+        }
+      },
+      "tokenBlackWhites": {
+        "whitelisted": [
+          "ukex"
+        ],
+        "blacklisted": [
+          "frozen"
+        ]
+      }
+    },
+    "upgrade": {}
+  }
+}
