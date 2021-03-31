@@ -68,6 +68,7 @@ _NOTE: After sending claim-validator-seat transaction you will NOT be able to ch
 * Genesis File Checksum: `d00fd0d0b846a68d93f425ba9655bebae18c31ee5687999935899e5d96b4d0be`
 * Genesis File Source: [link](./genesis/testnet-1.json)
 * Public Seed Addresses:
+    *  `18.130.78.46`
     *  `3.11.224.235`
     *  `3.11.25.53`
 * Public RPC Addresses: 
