@@ -58,7 +58,7 @@ sekaid tx customstaking claim-validator-seat --from validator --keyring-backend=
   --chain-id=$NETWORK_NAME --fees=100ukex --yes | jq
 ```
 
-_NOTE: After sending claim-validator-seat transaction you will NOT be able to change/edit any of the informations submitted in that transaction, so make sure that all data such as URL's, Names and so on are valid_
+_NOTE: After sending claim-validator-seat transaction you will NOT be able to change/edit any of the informations submitted in that transaction, so make sure that all data such as URL's, Names and so on are valid and up to date_
 
 ## Networks, Checksums & References
 
