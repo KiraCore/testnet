@@ -45,6 +45,21 @@ To persist your private keys type `cat $HOME/.secrets/mnemonics.env` and save th
 
 To recover accounts type `mkdir -p $HOME/.secrets && nano $HOME/.secrets/mnemonics.env`, then paste your saved secrets and press a combination of  `Ctrl+o`, `[ENTER]`, `Ctrl+x` to save changes. The command above has to be executed before infrastructure setup takes place otherwise it will not take effect during setup. Note, tht you have to run above command as non-sudo user.
 
+### Joining Validator Set
+
+After [submitting request form](https://forms.gle/3UPeksBrp9yDMNSA8) to join Public Testnet you will receive an on-chain permission to submit claim validator seat transaction. You will see that your node has WAITING status and after sending following transaction you will become a KIRA Testnet Validator:
+
+```
+sekaid tx customstaking claim-validator-seat --from validator --keyring-backend=test --home=$SEKAID_HOME \
+  --moniker="<Public-Name-Of-Your-Node>" \
+  --social="<Social-Media-URL-e.g.-Twitter>" \
+  --website="<Your-Official-Website-URL>" \
+  --identity="<Proof-Of-Identity-e.g.-Keybase-ID>" \
+  --chain-id=$NETWORK_NAME --fees=100ukex --yes | jq
+```
+
+_NOTE: After sending claim-validator-seat transaction you will NOT be able to change/edit any of the informations submitted in that transaction, so make sure that all data such as URL's, Names and so on are valid_
+
 ## Networks, Checksums & References
 
 ### Testnet-1 (latest)
@@ -59,6 +74,21 @@ To recover accounts type `mkdir -p $HOME/.secrets && nano $HOME/.secrets/mnemoni
     * `https://testnet-1-rpc.kira.network` 
 * Public Frontend Addresses: 
     * `https://testnet-1-ui.kira.network` 
+
+
+## Unjailing Stopped Validator Nodes
+
+It might happen that your running validator stops producing blocks due to hardware or software malfunction. As the result of your node halted block production it might become inactive (removed from consensus) and thus require sending an activate transaction:
+
+```
+sekaid tx customslashing activate --from validator --keyring-backend=test --home=$SEKAID_HOME --chain-id=$NETWORK_NAME --fees=1000ukex --yes | jq
+```
+
+When validator becomes inactive it's rank on the validators leeboard decreases. To prevent that from happening you can enable [M]aintenance mode which will inform the network that the downtime is planned. After you are ready to join validator set again you can simply disable the [M]aintenance mode and your validator will again join network operators set without decreasing its ranking position.
+
+![picture 1](https://i.imgur.com/G0o9Qn5.png)  
+
+
 
 
 
