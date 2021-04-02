@@ -64,15 +64,15 @@ _NOTE: After sending claim-validator-seat transaction you will NOT be able to ch
 
 ### Testnet-2 (latest)
 * Chain Identifier: `testnet-2`
-* Kira Manager Checksum: `TBA`
+* Kira Manager Checksum: `0fbb2fddebe06f1beea443b6c40c9fbb864b7cac33d79ce38c5345721238d18a`
 * Genesis File Checksum: `TBA`
 * Genesis File Source: [TBA](./testnet-2/genesis.json)
 * Public Seed Addresses:
-    *  `TBA`
+    * `TBA`
 * Public RPC Addresses: 
-    * `TBA` 
+    * `TBA`
 * Public Frontend Addresses: 
-    * `TBA` 
+    * `TBA`
   
 ### Testnet-1
 * Chain Identifier: `testnet-1`
@@ -83,9 +83,9 @@ _NOTE: After sending claim-validator-seat transaction you will NOT be able to ch
 * Blocks Height Reached: `49999`
 
 #### Post Mortem
-```
-Duplication of the validator when it's added to the validator set by the state machine. Most likely cause was a validator reactivation & validator claim call occurring at the same time or pause/unpause transaction sent in the same block.
-```
+
+> Duplication of the validator when it's added to the validator set by the state machine. Most likely cause was a validator reactivation & validator claim call occurring at the same time or pause/unpause transaction sent in the same block.
+
 
 ## Unjailing Stopped Validator Nodes
 
