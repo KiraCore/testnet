@@ -62,20 +62,30 @@ _NOTE: After sending claim-validator-seat transaction you will NOT be able to ch
 
 ## Networks, Checksums & References
 
-### Testnet-1 (latest)
+### Testnet-2 (latest)
+* Chain Identifier: `testnet-2`
+* Kira Manager Checksum: `TBA`
+* Genesis File Checksum: `TBA`
+* Genesis File Source: [TBA](./testnet-2/genesis.json)
+* Public Seed Addresses:
+    *  `TBA`
+* Public RPC Addresses: 
+    * `TBA` 
+* Public Frontend Addresses: 
+    * `TBA` 
+  
+### Testnet-1
 * Chain Identifier: `testnet-1`
 * Kira Manager Checksum: `26237215b968ecfd201d92c61a13b4c4ce84aa65d57465fe949b2b49f8e66db0`
 * Genesis File Checksum: `d00fd0d0b846a68d93f425ba9655bebae18c31ee5687999935899e5d96b4d0be`
-* Genesis File Source: [link](./genesis/testnet-1.json)
-* Public Seed Addresses:
-    *  `18.130.78.46`
-    *  `3.11.224.235`
-    *  `3.11.25.53`
-* Public RPC Addresses: 
-    * `https://testnet-1-rpc.kira.network` 
-* Public Frontend Addresses: 
-    * `https://testnet-1-ui.kira.network` 
+* Genesis File Source: [link](./testnet-1/genesis.json)
+* Latest Known Snapshot: [testnet-1-49999-1617358703.zip](https://kira-network.s3-eu-west-1.amazonaws.com/snapshots/testnet-1-49999-1617358703.zip)
+* Blocks Height Reached: `49999`
 
+#### Post Mortem
+```
+Duplication of the validator when it's added to the validator set by the state machine. Most likely cause was a validator reactivation & validator claim call occurring at the same time or pause/unpause transaction sent in the same block.
+```
 
 ## Unjailing Stopped Validator Nodes
 
