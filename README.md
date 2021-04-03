@@ -16,7 +16,7 @@
 
 ### Overview
 * Execute Setup Instruction
-  * As branch name input chain-id, e.g `testnet-1`
+  * As branch name input chain-id, e.g `testnet-2`
 * Verify Kira Manager Checksum
   * Click [V] to accept 
 * Select Sentry or Validator Mode
@@ -65,12 +65,14 @@ _NOTE: After sending claim-validator-seat transaction you will NOT be able to ch
 ### Testnet-2 (latest)
 * Chain Identifier: `testnet-2`
 * Kira Manager Checksum: `0fbb2fddebe06f1beea443b6c40c9fbb864b7cac33d79ce38c5345721238d18a`
-* Genesis File Checksum: `TBA`
-* Genesis File Source: [TBA](./testnet-2/genesis.json)
+* Genesis File Checksum: `918a64a5ca548b2b4803b96afd06c99cad5302521bdca8271e19e03ffbe879e5`
+* Genesis File Source: [link](./testnet-2/genesis.json)
 * Public Seed Addresses:
-    * `TBA`
+    * `3.11.224.235`
+    * `18.135.115.225`
+    * `52.56.117.134` 
 * Public RPC Addresses: 
-    * `TBA`
+    * `testnet-rpc.kira.network`
 * Public Frontend Addresses: 
     * `TBA`
   
