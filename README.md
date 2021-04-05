@@ -92,7 +92,7 @@ _NOTE: After sending claim-validator-seat transaction you will NOT be able to ch
 
 ## Unjailing Stopped Validator Nodes
 
-It might happen that your running validator stops producing blocks due to hardware or software malfunction. As the result of your node halted block production it might become inactive (removed from consensus) and thus require sending an activate transaction:
+It might happen that your running validator stops producing blocks due to hardware or software malfunction. As the result of your node halted block production it might become inactive (removed from consensus for ~10 minutes) and thus require sending an activate transaction:
 
 ```
 sekaid tx customslashing activate --from validator --keyring-backend=test --home=$SEKAID_HOME --chain-id=$NETWORK_NAME --fees=1000ukex --yes | jq
