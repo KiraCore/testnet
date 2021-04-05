@@ -70,7 +70,8 @@ _NOTE: After sending claim-validator-seat transaction you will NOT be able to ch
 * Public Seed Addresses:
     * `3.11.224.235`
     * `18.135.115.225`
-    * `52.56.117.134` 
+    * `52.56.117.134`
+    * `18.135.227.190`
 * Public RPC Addresses: 
     * `testnet-rpc.kira.network`
 * Public Frontend Addresses: 
