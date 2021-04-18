@@ -21,7 +21,7 @@
   * Click [V] to accept 
 * Select Sentry or Validator Mode
 * Select Quick Mode
-  * Input Address of the trusted Public Seed Node
+  * Input Address of the [Public Seed Node](https://testnet-rpc.kira.network/download/peers.txt)
 * Backup Auto-Generated Private Keys
 
 ### Setup Instructions
@@ -39,15 +39,15 @@ _NOTE: Branch name should be the same as chain-id. When prompted to verify check
 
 ### Keys Backup Instructions
 
-To persist your private keys type `cat $HOME/.secrets/mnemonics.env` and save the content so that you can recover your accounts easily. Note, tht you have to run above command as non-sudo user.
+To persist your private keys type `cat /home/<username>/.secrets/mnemonics.env` and save the content so that you can recover your accounts easily. Remember to replace `<username>` with your user name otherwise instruction above will fail.
 
 ### Keys Recovery Instructions
 
-To recover accounts type `mkdir -p $HOME/.secrets && nano $HOME/.secrets/mnemonics.env`, then paste your saved secrets and press a combination of  `Ctrl+o`, `[ENTER]`, `Ctrl+x` to save changes. The command above has to be executed before infrastructure setup takes place otherwise it will not take effect during setup. Note, tht you have to run above command as non-sudo user.
+To recover accounts type `cd /home/<username> && mkdir ./.secrets && nano ./.secrets/mnemonics.env`, then paste your saved secrets and press a combination of  `Ctrl+o`, `[ENTER]`, `Ctrl+x` to preserve changes. The command above has to be executed before infrastructure setup takes place otherwise it will not take effect during setup. Remember to replace `<username>` with your user name otherwise new set of keys will be generated.
 
 ### Joining Validator Set
 
-After [submitting request form](https://forms.gle/3UPeksBrp9yDMNSA8) to join Public Testnet you will receive an on-chain permission to submit claim validator seat transaction. You will see that your node has WAITING status and after sending following transaction you will become a KIRA Testnet Validator:
+After [submitting request form](https://forms.gle/3UPeksBrp9yDMNSA8) to join Public Testnet you will receive an on-chain permission to submit claim validator seat transaction. You will see that your node has `WAITING` status and after sending following transaction from within `validator` container you will become a KIRA Testnet Validator:
 
 ```
 sekaid tx customstaking claim-validator-seat --from validator --keyring-backend=test --home=$SEKAID_HOME \
@@ -55,25 +55,20 @@ sekaid tx customstaking claim-validator-seat --from validator --keyring-backend=
   --social="<Social-Media-URL-e.g.-Twitter>" \
   --website="<Your-Official-Website-URL>" \
   --identity="<Proof-Of-Identity-e.g.-Keybase-ID>" \
-  --chain-id=$NETWORK_NAME --fees=100ukex --yes | jq
+  --chain-id=$NETWORK_NAME --fees=100ukex --gas=1000000 \
+  --broadcast-mode=async --yes | txAwait
 ```
 
 _NOTE: After sending claim-validator-seat transaction you will NOT be able to change/edit any of the informations submitted in that transaction, so make sure that all data such as URL's, Names and so on are valid and up to date_
-
-_NOTE: If you have problem with sending transactions you can use `--broadcast-mode=async` flag and then use `sekaid query tx <txhash>` to see when transaction becomes included in the block_
 
 ## Networks, Checksums & References
 
 ### Testnet-2 (latest)
 * Chain Identifier: `testnet-2`
-* Kira Manager Checksum: `0fbb2fddebe06f1beea443b6c40c9fbb864b7cac33d79ce38c5345721238d18a`
+* Kira Manager Checksum: `e0dcfa5b4b4feba8bdc8665fb47cd0fa587e65984a743b3bc13f2250032e74df`
 * Genesis File Checksum: `918a64a5ca548b2b4803b96afd06c99cad5302521bdca8271e19e03ffbe879e5`
 * Genesis File Source: [link](./testnet-2/genesis.json)
-* Public Seed Addresses:
-    * `3.11.224.235`
-    * `18.135.115.225`
-    * `52.56.117.134`
-    * `18.135.227.190`
+* Public Seed Nodes List: [link](https://testnet-rpc.kira.network/download/peers.txt)
 * Public RPC Addresses: 
     * `testnet-rpc.kira.network`
 * Public Frontend Addresses: 
@@ -85,7 +80,7 @@ _NOTE: If you have problem with sending transactions you can use `--broadcast-mo
 * Genesis File Checksum: `d00fd0d0b846a68d93f425ba9655bebae18c31ee5687999935899e5d96b4d0be`
 * Genesis File Source: [link](./testnet-1/genesis.json)
 * Latest Known Snapshot: [testnet-1-49999-1617358703.zip](https://kira-network.s3-eu-west-1.amazonaws.com/snapshots/testnet-1-49999-1617358703.zip)
-* Blocks Height Reached: `49999`
+* Block Height Reached: `49999`
 
 #### Post Mortem
 
@@ -94,20 +89,28 @@ _NOTE: If you have problem with sending transactions you can use `--broadcast-mo
 
 ## Unjailing Stopped Validator Nodes
 
-It might happen that your running validator stops producing blocks due to hardware or software malfunction. As the result of your node halted block production it might become inactive (removed from consensus for ~10 minutes) and thus require sending an activate transaction:
+It might happen that your running validator stops producing blocks due to hardware or software malfunction. As the result of your node halted block production it might become `INACTIVE` (removed from consensus for ~10 minutes) and thus require sending an activate transaction, by selecting option [A]ctivate in the KIRA Manager main menu, or by inspecting `validator` container and posting following command into the console:
 
 ```
-out="" && tx=$(sekaid tx customslashing activate --from validator --keyring-backend=test --home=$SEKAID_HOME --chain-id=$NETWORK_NAME --fees=1000ukex --broadcast-mode=async --yes --log_format=json | jq -rc '.txhash') && \
-while [ -z "$out" ] ; do echo "Waiting for '$tx' to be included in the block..." && sleep 5 && \
-out=$(sekaid query tx $tx --output=json 2> /dev/null | jq -rc '.' || echo "") ; done && \
-echo $out | jq
+sekaid tx customslashing activate --from validator --keyring-backend=test --home=$SEKAID_HOME --chain-id=$NETWORK_NAME --fees=1000ukex --broadcast-mode=async --log_format=json --gas=1000000 --broadcast-mode=async --yes | txAwait
 ```
 
-When validator becomes inactive it's rank on the validators leeboard decreases. To prevent that from happening you can enable [M]aintenance mode which will inform the network that the downtime is planned. After you are ready to join validator set again you can simply disable the [M]aintenance mode and your validator will again join network operators set without decreasing its ranking position.
+![picture 2](https://i.imgur.com/HC79dRk.png)  
+
+
+When validator becomes inactive it's rank on the validators leeboard decreases. To prevent that from happening you can enable [M]aintenance mode which will inform the network that the downtime is planned. After you are ready to join validator set again you can disable the [M]aintenance mode and your validator will again join network operators set without decreasing its ranking position.
+
+You can also enable/disable maintenance mode manually by inspecting your `validator` container and sending following command to the console window:
+
+```
+# Pausing ACTIVE Node (enabling maintenance)
+sekaid tx customslashing pause --from validator --keyring-backend=test --home=$SEKAID_HOME --chain-id=$NETWORK_NAME --fees=1000ukex --broadcast-mode=async --log_format=json --gas=1000000 --broadcast-mode=async --yes | txAwait
+
+# UnPausing PAUSED Node (disabling maintenance mode)
+sekaid tx customslashing unpause --from validator --keyring-backend=test --home=$SEKAID_HOME --chain-id=$NETWORK_NAME --fees=1000ukex --broadcast-mode=async --log_format=json --gas=1000000 --broadcast-mode=async --yes | txAwait
+```
 
 ![picture 1](https://i.imgur.com/G0o9Qn5.png)  
-
-
 
 
 
