@@ -1,0 +1,14 @@
+{
+	"height": "204504",
+	"round": 9,
+	"step": "RoundStepPrevote",
+	"start_time": "2021-04-19T15:06:08.174485705Z",
+	"commit_time": "2021-04-19T15:06:03.174485705Z",
+	"triggered_timeout_precommit": false,
+	"proposer": "kira15d58awm2rj06zrcltvg53ef9ny6vgjlsp03pyp",
+	"precommits": ["kira1nh54r5u8kurfhpqmgdpmsvhlgdymuws32a22yy", "kira1nh54r5u8kurfhpqmgdpmsvhlgdymuws32a22yy", "kira1nh54r5u8kurfhpqmgdpmsvhlgdymuws32a22yy", "kira1nh54r5u8kurfhpqmgdpmsvhlgdymuws32a22yy", "kira1nh54r5u8kurfhpqmgdpmsvhlgdymuws32a22yy", "kira1nh54r5u8kurfhpqmgdpmsvhlgdymuws32a22yy", "kira1nh54r5u8kurfhpqmgdpmsvhlgdymuws32a22yy", "kira1nh54r5u8kurfhpqmgdpmsvhlgdymuws32a22yy", "kira1nh54r5u8kurfhpqmgdpmsvhlgdymuws32a22yy"],
+	"prevotes": [],
+	"noncommits": ["kira1jvzw3ah35uee69626tlghjdhef7h0tg9wtzc0r", "kira1ux8x0deann44r5nvxfz702keulj28slksmmcar", "kira140pt4njk0d7x9arrx37fdr722v0qelu39hnk3r", "kira19sxgh2j0fzr56vnt3xagnzhu8qpty3kwvmc6z9", "kira1npqlnmws5qhhlh30tpqfh2es38650u0a8ylhsm", "kira1hhu73jeyc8jhqpa5rhq54zlstdxvz2pwhklkz8", "kira1uwj62l7rxtcg76lxj0gch3659hzdkmhmj72k8f", "kira1rvpjtmwaj982tu0ukn0u3chkkzcx0xk2lc0sj8", "kira1a7vfwsah7u7y4rqesacge5n7upv224ghgcxpt2", "kira1ukl848xfsfj4kgfw4sw2dc6ssp0gd745040qsq", "kira1hvu2h0f94fyzkfjx4c2unu9carq3d7z24jy69t", "kira1gklm36xjqcn075sqhwa8hcq2ljukznn9p5q90l", "kira12n9sfy0ppv8chqduezfmvdukllnc3rzakw60px", "kira1dr0nspdkqqyvur2h7rfdk9ew6nh8aa08lkmq82", "kira15wexe2awg2pl8hlcdvnuwdy6czzh2lhz9he8w8", "kira1cg974v5ckg3x3s9fwkzzxwvc7lxt7a9fsup4g6", "kira1hc5vngcvt2kp4k04cqhdjamu7h7wphhpn8g8nj", "kira1v3t8dy5sthfmuuckcsgzwnd02nyh23utykyccd", "kira1903paencyfz85r8gweqw2dgar03p0wnzf2pvha", "kira17twugj00s4dcevl806dhst53yk3wl822n7dzrs", "kira150yr8xqw494mln0tnlcrrnl5te0979nd267k4y", "kira1x0u9z5m8cc39hyn2pn6raafphqqy30qfk55klg", "kira1u62jm72m6aawzh7tywmqhc4jkgyylu65zdzvla", "kira15d58awm2rj06zrcltvg53ef9ny6vgjlsp03pyp", "kira19uanc65xrh6kr2fdcvv4jqhv4j3x8zu5x30xf9", "kira1tkm0pv2ath9wpfk8ywp8m5y3eqwjac26w4f04t", "kira16zf3l7sfwyskvmzjz0u36p999gzyn5cahjxa0a", "kira1d3tzpe24rq4uzs0h65chfz5p6ms8n6tqj4jhxs", "kira1m7nh2d0hz0sef5j2nwkag7gpf8rg5ak2ldfgkt", "kira1dl5dhpkqql6qd03tzdlzlvldgd0undjl5mnlln"],
+	"average_block_time": 13.82445705343065,
+	"consensus_stopped": true
+}

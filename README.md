@@ -16,7 +16,7 @@
 
 ### Overview
 * Execute Setup Instruction
-  * As branch name input chain-id, e.g `testnet-2`
+  * As branch name input chain-id, e.g `testnet-3`
 * Verify Kira Manager Checksum
   * Click [V] to accept 
 * Select Sentry or Validator Mode
@@ -63,23 +63,31 @@ _NOTE: After sending claim-validator-seat transaction you will NOT be able to ch
 
 ## Networks, Checksums & References
 
-### Testnet-2 (latest)
+### Testnet-3 (latest)
+* Chain Identifier: `testnet-3`
+* Kira Manager Checksum: `7f6033cd8f218522b20a3885a68100884ce390b9967191de590f6b0a7427fbc4`
+* Genesis File Checksum: `e800493110fb1e0b8cc3360643387eb05d0d3b08a22212dbacaccf9c1308ea8e`
+* Genesis File Source: [link](./testnet-3/genesis.json)
+* Public Seed Nodes List: [link](https://testnet-rpc.kira.network/download/peers.txt)
+* Public RPC Addresses: 
+    * `testnet-rpc.kira.network`
+
+### Testnet-2
 * Chain Identifier: `testnet-2`
 * Kira Manager Checksum: `e0dcfa5b4b4feba8bdc8665fb47cd0fa587e65984a743b3bc13f2250032e74df`
 * Genesis File Checksum: `918a64a5ca548b2b4803b96afd06c99cad5302521bdca8271e19e03ffbe879e5`
 * Genesis File Source: [link](./testnet-2/genesis.json)
-* Public Seed Nodes List: [link](https://testnet-rpc.kira.network/download/peers.txt)
-* Public RPC Addresses: 
-    * `testnet-rpc.kira.network`
-* Public Frontend Addresses: 
-    * `TBA`
-  
+* Block Height Reached: `204503`
+
+#### Post Mortem
+
+> Old release of TM caused [Denial of Service 2](https://forum.cosmos.network/t/tendermint-core-vulnerability-retrospective-security-advisory-mulberry-january-19-2021/4336) resulting in the network halt 
+
 ### Testnet-1
 * Chain Identifier: `testnet-1`
 * Kira Manager Checksum: `26237215b968ecfd201d92c61a13b4c4ce84aa65d57465fe949b2b49f8e66db0`
 * Genesis File Checksum: `d00fd0d0b846a68d93f425ba9655bebae18c31ee5687999935899e5d96b4d0be`
 * Genesis File Source: [link](./testnet-1/genesis.json)
-* Latest Known Snapshot: [testnet-1-49999-1617358703.zip](https://kira-network.s3-eu-west-1.amazonaws.com/snapshots/testnet-1-49999-1617358703.zip)
 * Block Height Reached: `49999`
 
 #### Post Mortem
