@@ -65,7 +65,7 @@ _NOTE: After sending claim-validator-seat transaction you will NOT be able to ch
 
 ### Testnet-3 (latest)
 * Chain Identifier: `testnet-3`
-* Kira Manager Checksum: `8b4c0a50b2ee5a17568ed708eccb571095d03c459627d31a936ed852aa6d095c`
+* Kira Manager Checksum: `1837ccd10c21d5e1633751a8c8ce7d7a226ea63a569010a5ff93ad2f02b82d62`
 * Genesis File Checksum: `85b30bd1e9334299ccfdb39e9385c423f7b43959082ef1d68160ade79c2d6b66`
 * Genesis File Source: [link](./testnet-3/genesis.json)
 * Public Seed Nodes List: [link](https://testnet-rpc.kira.network/download/peers.txt)
