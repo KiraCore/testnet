@@ -63,14 +63,26 @@ _NOTE: After sending claim-validator-seat transaction you will NOT be able to ch
 
 ## Networks, Checksums & References
 
-### Testnet-3 (latest)
+### Testnet-4 (latest)
+* Chain Identifier: `testnet-4`
+* Kira Manager Checksum: `9df6d282c0f7c85f36a0e95bf89b223c5be7fded44acf551206f1c2db475ebaa`
+* Genesis File Checksum: `240b0fe67095e7e25a1e98ba2062231dca0ece81c24f12e8371a31798ade276b`
+* Genesis File Source: [link](./testnet-4/genesis.json)
+* Public Seed Nodes List: [link](https://testnet-rpc.kira.network/download/peers.txt)
+* Public RPC Addresses: 
+    * `testnet-rpc.kira.network`
+* Block Height Reached: `465099`
+
+### Testnet-3
 * Chain Identifier: `testnet-3`
 * Kira Manager Checksum: `1837ccd10c21d5e1633751a8c8ce7d7a226ea63a569010a5ff93ad2f02b82d62`
 * Genesis File Checksum: `85b30bd1e9334299ccfdb39e9385c423f7b43959082ef1d68160ade79c2d6b66`
 * Genesis File Source: [link](./testnet-3/genesis.json)
-* Public Seed Nodes List: [link](https://testnet-rpc.kira.network/download/peers.txt)
-* Public RPC Addresses: 
-    * `testnet-rpc.kira.network`
+* Block Height Reached: `465099`
+
+#### Post Mortem
+
+> State machine fault while changing validator set
 
 ### Testnet-2
 * Chain Identifier: `testnet-2`

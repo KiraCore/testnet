@@ -1,0 +1,14 @@
+{
+	"average_block_time": 9.787604864531117,
+	"commit_time": "2021-06-04T16:40:23.376719159Z",
+	"consensus_stopped": true,
+	"height": "465099",
+	"noncommits": ["kira16p4lg99x9pld245rfnxkwk86vjpp6wkmfpcxdc", "kira1gx94hkxxqmngwqxpfg4ahx225ztwu8q9644nps", "kira15l3ehuvcvlks99xjywlvhl2ygx8j97t5ph62w5", "kira1f4cmqsanea7wr9xqmzvnjuqca02vlt2pf0h3gt"],
+	"precommits": ["kira159ev6dxjc4r9rqvkm9xmqr7dhewfuh623gvdgu", "kira159ev6dxjc4r9rqvkm9xmqr7dhewfuh623gvdgu"],
+	"prevotes": [],
+	"proposer": "kira10flmchgzq90elwmqpgt5fnp6cfgsctte0vwpsa",
+	"round": 1,
+	"start_time": "2021-06-04T16:40:16.120784508Z",
+	"step": "RoundStepCommit",
+	"triggered_timeout_precommit": false
+}
