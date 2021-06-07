@@ -16,7 +16,7 @@
 
 ### Overview
 * Execute Setup Instruction
-  * As branch name input chain-id, e.g `testnet-3`
+  * As branch name input chain-id, e.g `testnet-4`
 * Verify Kira Manager Checksum
   * Click [V] to accept 
 * Select Sentry or Validator Mode
