@@ -71,7 +71,6 @@ _NOTE: After sending claim-validator-seat transaction you will NOT be able to ch
 * Public Seed Nodes List: [link](https://testnet-rpc.kira.network/download/peers.txt)
 * Public RPC Addresses: 
     * `testnet-rpc.kira.network`
-* Block Height Reached: `465099`
 
 ### Testnet-3
 * Chain Identifier: `testnet-3`
