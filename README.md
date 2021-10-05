@@ -16,12 +16,12 @@
 
 ### Overview
 * Execute Setup Instruction
-  * As branch name input chain-id, e.g `testnet-4`
+  * As branch name input `testnet-5`
 * Verify Kira Manager Checksum
   * Click [V] to accept 
 * Select Sentry or Validator Mode
-* Select Quick Mode
-  * Input Address of the [Public Seed Node](https://testnet-rpc.kira.network/download/peers.txt)
+* Click [S] to start setup
+  * Input Address of the [Public Seed Node](https://testnet-rpc.kira.network/download/peers.txt) and follow instructions on the screen.
 * Backup Auto-Generated Private Keys
 
 ### Setup Instructions
@@ -32,7 +32,7 @@ sudo -s
 cd /tmp && read -p "Input branch name: " BRANCH && \
  wget https://raw.githubusercontent.com/KiraCore/kira/$BRANCH/workstation/init.sh -O ./i.sh && \
  chmod 555 -v ./i.sh && H=$(sha256sum ./i.sh | awk '{ print $1 }') && read -p "Is '$H' a [V]alid SHA256 ?: "$'\n' -n 1 V && \
- [ "${V,,}" == "v" ] && ./i.sh "$BRANCH" || echo "ERROR: Setup failed or was cancelled by the user. Try again init command."
+ [ "${V,,}" != "v" ] && echo "INFO: Setup was cancelled by the user." || ./i.sh "$BRANCH"
 ```
 
 _NOTE: Branch name should be the same as chain-id. When prompted to verify checksum press [V] to proceed_
@@ -43,7 +43,9 @@ To persist your private keys type `cat /home/<username>/.secrets/mnemonics.env` 
 
 ### Keys Recovery Instructions
 
-To recover accounts type `cd /home/<username> && mkdir ./.secrets && nano ./.secrets/mnemonics.env`, then paste your saved secrets and press a combination of  `Ctrl+o`, `[ENTER]`, `Ctrl+x` to preserve changes. The command above has to be executed before infrastructure setup takes place otherwise it will not take effect during setup. Remember to replace `<username>` with your user name otherwise new set of keys will be generated.
+If you are installing KIRA Manager for the first time on the clean instance you will be prompted during setup to input mnemonic or auto generate a new one, you can also manually recover all your secrets as follows:
+
+Type `cd /home/<username> && mkdir ./.secrets && nano ./.secrets/mnemonics.env`, then paste your saved secrets and press a combination of  `Ctrl+o`, `[ENTER]`, `Ctrl+x` to preserve changes. The command above has to be executed before infrastructure setup takes place otherwise it will not take effect during setup. Remember to replace `<username>` with your user name otherwise new set of keys will be generated.
 
 ### Joining Validator Set
 
@@ -52,25 +54,33 @@ After [submitting request form](https://forms.gle/3UPeksBrp9yDMNSA8) to join Pub
 ```
 sekaid tx customstaking claim-validator-seat --from validator --keyring-backend=test --home=$SEKAID_HOME \
   --moniker="<Public-Name-Of-Your-Node>" \
-  --social="<Social-Media-URL-e.g.-Twitter>" \
-  --website="<Your-Official-Website-URL>" \
-  --identity="<Proof-Of-Identity-e.g.-Keybase-ID>" \
-  --chain-id=$NETWORK_NAME --fees=100ukex --gas=1000000 \
+  --chain-id=$NETWORK_NAME --fees=100ukex \
   --broadcast-mode=async --yes | txAwait
 ```
 
-_NOTE: After sending claim-validator-seat transaction you will NOT be able to change/edit any of the informations submitted in that transaction, so make sure that all data such as URL's, Names and so on are valid and up to date_
+_NOTE: If you are using KIRA Manager simply select [J]oin validator set option. To update your validator moniker, website and other info see the "Identity Registrar & Launch Roadmap" article on the blog.kira.network._
 
 ## Networks, Checksums & References
 
-### Testnet-4 (latest)
+### Testnet-5 (latest)
+* Chain Identifier: `testnet-5`
+* Kira Manager Checksum: `35cfa0e7cee9eaab8c5e84986bbe81780d8c02c6ec76ad385953dc1148d457c0`
+* Genesis File Checksum: `26efc7a3deb6fe8a1932cfffbbdf47a86f16811defc0b4a9a00575de6d0868cb`
+* Genesis File Source: [link](./testnet-5/genesis.json)
+* Public Seed Nodes List: [link](https://testnet-rpc.kira.network/download/peers.txt)
+* Public RPC Addresses: 
+    * `testnet-rpc.kira.network`
+
+### Testnet-4
 * Chain Identifier: `testnet-4`
 * Kira Manager Checksum: `d2de922720744da7e5fa501f78c94d5ce7901744eca81a1796e3a308d7114e31`
 * Genesis File Checksum: `240b0fe67095e7e25a1e98ba2062231dca0ece81c24f12e8371a31798ade276b`
 * Genesis File Source: [link](./testnet-4/genesis.json)
-* Public Seed Nodes List: [link](https://testnet-rpc.kira.network/download/peers.txt)
-* Public RPC Addresses: 
-    * `testnet-rpc.kira.network`
+* Block Height Reached: `1271603+`
+
+#### Post Mortem
+
+> Depreciated with a hard fork in order to include automated upgrade module & identity registrar
 
 ### Testnet-3
 * Chain Identifier: `testnet-3`
@@ -123,10 +133,10 @@ You can also enable/disable maintenance mode manually by inspecting your `valida
 
 ```
 # Pausing ACTIVE Node (enabling maintenance)
-sekaid tx customslashing pause --from validator --keyring-backend=test --home=$SEKAID_HOME --chain-id=$NETWORK_NAME --fees=1000ukex --broadcast-mode=async --log_format=json --gas=1000000 --broadcast-mode=async --yes | txAwait
+sekaid tx customslashing pause --from validator --keyring-backend=test --home=$SEKAID_HOME --chain-id=$NETWORK_NAME --fees=1000ukex --broadcast-mode=async --log_format=json --broadcast-mode=async --yes | txAwait
 
 # UnPausing PAUSED Node (disabling maintenance mode)
-sekaid tx customslashing unpause --from validator --keyring-backend=test --home=$SEKAID_HOME --chain-id=$NETWORK_NAME --fees=1000ukex --broadcast-mode=async --log_format=json --gas=1000000 --broadcast-mode=async --yes | txAwait
+sekaid tx customslashing unpause --from validator --keyring-backend=test --home=$SEKAID_HOME --chain-id=$NETWORK_NAME --fees=1000ukex --broadcast-mode=async --log_format=json --broadcast-mode=async --yes | txAwait
 ```
 
 ![picture 1](https://i.imgur.com/G0o9Qn5.png)  
