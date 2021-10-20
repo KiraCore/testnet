@@ -62,7 +62,7 @@ _NOTE: If you are using KIRA Manager simply select [J]oin validator set option. 
 
 ### Hard Forks & Soft Forks
 
-All hard and soft forks can be detected via KIRA Manager CLI command `showNextPlan` or by querying `/api/kira/upgrade/next_plan` INTERX endpoint, which contain detailed information in regards to time and upcoming software releases. If the `instate_upgrade` is set to `false` a hard fork is expected and genesis file changes are necessary after halt of the chain. 
+All hard and soft forks can be detected via KIRA Manager CLI command `showNextPlan` or by querying `/api/kira/upgrade/next_plan` INTERX endpoint, which contains detailed information in regards to time and upcoming software releases. If the `instate_upgrade` property is set to `false` a hard fork is expected and genesis file changes are necessary after halt of the chain. If the network is halted due to ongoing hard fork, then validators who do NOT use KIRA Manager should export genesis with the `sekaid export` command and then convert the exported genesis into a new genesis using `sekaid new-genesis-from-exported` command. More details in regards to the Hard & Soft forks can be found in the [Infrastructure Overview 2.0](https://blog.kira.network/kira-infrastructure-overview-2-0-b3bf94ba647) article.
 
 ## Networks, Checksums & References
 
