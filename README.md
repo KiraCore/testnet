@@ -60,7 +60,17 @@ sekaid tx customstaking claim-validator-seat --from validator --keyring-backend=
 
 _NOTE: If you are using KIRA Manager simply select [J]oin validator set option. To update your validator moniker, website and other info see the "Identity Registrar & Launch Roadmap" article on the blog.kira.network._
 
+### Hard Forks & Soft Forks
+
+All hard and soft forks can be detected via KIRA Manager CLI command `showNextPlan` or by querying `/api/kira/upgrade/next_plan` INTERX endpoint, which contain detailed information in regards to time and upcoming software releases. If the `instate_upgrade` is set to `false` a hard fork is expected and genesis file changes are necessary after halt of the chain. 
+
 ## Networks, Checksums & References
+
+### Testnet-6 (upcoming)
+* Chain Identifier: `testnet-6`
+* Expected Launch Time: `1634985000`
+* Kira Manager Checksum: `199a3454d4e88a152d8ea05dde33ad9cb8e7475eddbdf0488b4ebff5b2c9ac02`
+* Genesis File Checksum: `TBD`
 
 ### Testnet-5 (latest)
 * Chain Identifier: `testnet-5`
@@ -70,6 +80,10 @@ _NOTE: If you are using KIRA Manager simply select [J]oin validator set option. 
 * Public Seed Nodes List: [link](https://testnet-rpc.kira.network/download/peers.txt)
 * Public RPC Addresses: 
     * `testnet-rpc.kira.network`
+
+#### Post Mortem
+
+> Depreciated due to planned hard fork at 10:30 PM 2021-10-23
 
 ### Testnet-4
 * Chain Identifier: `testnet-4`
