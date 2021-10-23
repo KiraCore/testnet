@@ -66,13 +66,14 @@ All hard and soft forks can be detected via KIRA Manager CLI command `showNextPl
 
 ## Networks, Checksums & References
 
-### Testnet-6 (upcoming)
+### Testnet-6 (latest)
 * Chain Identifier: `testnet-6`
-* Expected Launch Time: `1634985000`
+* Expected Launch Time: `1635028200`
 * Kira Manager Checksum: `199a3454d4e88a152d8ea05dde33ad9cb8e7475eddbdf0488b4ebff5b2c9ac02`
-* Genesis File Checksum: `TBD`
+* Genesis File Checksum: `bf08fe3cd574ec36eabf165fc4be15ee0e06673e145b3e16ed8480f0829d7ea6`
+* Genesis File Source: [link](./testnet-6/genesis.json)
 
-### Testnet-5 (latest)
+### Testnet-5
 * Chain Identifier: `testnet-5`
 * Kira Manager Checksum: `35cfa0e7cee9eaab8c5e84986bbe81780d8c02c6ec76ad385953dc1148d457c0`
 * Genesis File Checksum: `26efc7a3deb6fe8a1932cfffbbdf47a86f16811defc0b4a9a00575de6d0868cb`
