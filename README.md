@@ -16,7 +16,7 @@
 
 ### Overview
 * Execute Setup Instruction
-  * As branch name input `testnet-5`
+  * As branch name input `testnet-6`
 * Verify Kira Manager Checksum
   * Click [V] to accept 
 * Select Sentry or Validator Mode
