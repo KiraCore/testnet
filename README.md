@@ -1,22 +1,21 @@
 # KIRA Network Public Testnet
 
 ## Hardware & Software Prerequisites
-* 4 vCPU cores (ARM64 or x64)
-* Minimum 8GB of RAM
-* Minimum 32GB+ of the free storage space
-* Storage space required to persist blockchain state and snapshots (512 GB recommended)
+* `4 vCPU` cores (ARM64 or x64)
+* Minimum `8GB` of RAM
+* Storage space required to persist blockchain state and snapshots (`512GB+` recommended)
+* Minimum `32GB+` of the **free** storage space available at all times
 * Disposable cloud instance or VM
-* Ubuntu 20.04 LTS installed on the host instance or VM
-* Stable internet connection with at least 10 Mbps Up/Dn speed
+* Ubuntu `20.04 LTS` installed on the **host** instance or VM
+* Stable internet connection with minimum `10 Mbps` Up/Dn speed
 * Static IP address or dynamic DNS
 * Access to router or otherwise your local network configuration
-
 
 ## Infrastructure Setup
 
 ### Overview
 * Execute Setup Instruction
-  * As branch name input `testnet-6`
+  * As branch name input `testnet-*` (* - see list below for the latest number)
 * Verify Kira Manager Checksum
   * Click [V] to accept 
 * Select Sentry or Validator Mode
@@ -66,21 +65,35 @@ All hard and soft forks can be detected via KIRA Manager CLI command `showNextPl
 
 ## Networks, Checksums & References
 
-### Testnet-6 (latest)
+
+### Testnet-7 (latest)
+* Chain Identifier: `testnet-7`
+* Kira Manager Checksum: `0feca1c125f2291596dd115ff2cf720032a7098030f8aa97c164afa9ca79644e`
+* Genesis File Checksum: `15468bc041c31622aabdb83d5bac33d4fae9d2593c295825a609c5de9b28764a`
+* Genesis File Source: [link](./testnet-7/genesis.json)
+* Public Seed Nodes List: [link](https://testnet-rpc.kira.network/download/peers.txt)
+* Public RPC Addresses: 
+    * `testnet-rpc.kira.network`
+
+### Testnet-6
 * Chain Identifier: `testnet-6`
 * Expected Launch Time: `1635028200`
 * Kira Manager Checksum: `199a3454d4e88a152d8ea05dde33ad9cb8e7475eddbdf0488b4ebff5b2c9ac02`
 * Genesis File Checksum: `bf08fe3cd574ec36eabf165fc4be15ee0e06673e145b3e16ed8480f0829d7ea6`
 * Genesis File Source: [link](./testnet-6/genesis.json)
+* Initial Block Height: `243887`
+* Block Height Reached: `243887`
+
+#### Post Mortem
+
+> Failed to reach 2/3+1 of active validators after hard fork upgrade
 
 ### Testnet-5
 * Chain Identifier: `testnet-5`
 * Kira Manager Checksum: `35cfa0e7cee9eaab8c5e84986bbe81780d8c02c6ec76ad385953dc1148d457c0`
 * Genesis File Checksum: `26efc7a3deb6fe8a1932cfffbbdf47a86f16811defc0b4a9a00575de6d0868cb`
 * Genesis File Source: [link](./testnet-5/genesis.json)
-* Public Seed Nodes List: [link](https://testnet-rpc.kira.network/download/peers.txt)
-* Public RPC Addresses: 
-    * `testnet-rpc.kira.network`
+* Block Height Reached: `243887`
 
 #### Post Mortem
 
