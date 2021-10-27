@@ -69,7 +69,7 @@ All hard and soft forks can be detected via KIRA Manager CLI command `showNextPl
 ### Testnet-7 (latest)
 * Chain Identifier: `testnet-7`
 * Kira Manager Checksum: `0feca1c125f2291596dd115ff2cf720032a7098030f8aa97c164afa9ca79644e`
-* Genesis File Checksum: `29d86e7317db1c95d0bc0991ba9c860d4b2025aa50fb701c511371299c1eea0c`
+* Genesis File Checksum: `0x3c7d72740fbd6f840e9757feaa81a3575cabbdb0a213c1e2c1e30913b8771274`
 * Genesis File Source: [link](./testnet-7/genesis.json)
 * Public Seed Nodes List: [link](https://testnet-rpc.kira.network/download/peers.txt)
 * Initial Block Height: `2500`
