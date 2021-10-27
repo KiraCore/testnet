@@ -1,7 +1,7 @@
 {
-    "genesis_time": "2021-10-27T09:53:13.018555214Z",
+    "genesis_time": "2021-10-27T17:28:30.012345678Z",
     "chain_id": "testnet-7",
-    "initial_height": "1",
+    "initial_height": "2500",
     "consensus_params": {
       "block": {
         "max_bytes": "22020096",
