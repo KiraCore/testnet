@@ -65,6 +65,12 @@ All hard and soft forks can be detected via KIRA Manager CLI command `showNextPl
 
 ## Networks, Checksums & References
 
+### Testnet-8 (upcoming)
+* Chain Identifier: `testnet-8`
+* Expected Launch Time: `1636216200`
+* Kira Manager Checksum: `0feca1c125f2291596dd115ff2cf720032a7098030f8aa97c164afa9ca79644e`
+* Genesis File Checksum: `TBD`
+* Initial Block Height: `TBD`
 
 ### Testnet-7 (latest)
 * Chain Identifier: `testnet-7`
@@ -73,8 +79,13 @@ All hard and soft forks can be detected via KIRA Manager CLI command `showNextPl
 * Genesis File Source: [link](./testnet-7/genesis.json)
 * Public Seed Nodes List: [link](https://testnet-rpc.kira.network/download/peers.txt)
 * Initial Block Height: `2500`
+* * Block Height Reached: `TBD`
 * Public RPC Addresses: 
     * `testnet-rpc.kira.network`
+
+#### Post Mortem
+
+> To be depreciated due to planned hard fork at 4:30 PM 2021-11-06
 
 ### Testnet-6
 * Chain Identifier: `testnet-6`
