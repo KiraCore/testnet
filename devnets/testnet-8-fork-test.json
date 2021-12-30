@@ -14483,7 +14483,7 @@
 				"address": "kira1qqt7vt8gqy3nyrhugtjnvfge7pllhl5mztntyx",
 				"permissions": {
 					"blacklist": [],
-					"whitelist": []
+					"whitelist": [1,1]
 				},
 				"roles": [],
 				"skin": "0",
@@ -14493,7 +14493,7 @@
 				"address": "kira1qq3448g7495ne5mpzmx5ur9lwnk3caahlhaj2t",
 				"permissions": {
 					"blacklist": [],
-					"whitelist": []
+					"whitelist": [1]
 				},
 				"roles": [],
 				"skin": "0",
