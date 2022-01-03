@@ -63,7 +63,22 @@ _NOTE: If you are using KIRA Manager simply select [J]oin validator set option. 
 
 All hard and soft forks can be detected via KIRA Manager CLI command `showNextPlan` or by querying `/api/kira/upgrade/next_plan` INTERX endpoint, which contains detailed information in regards to time and upcoming software releases. If the `instate_upgrade` property is set to `false` a hard fork is expected and genesis file changes are necessary after halt of the chain. If the network is halted due to ongoing hard fork, then validators who do NOT use KIRA Manager should export genesis with the `sekaid export` command and then convert the exported genesis into a new genesis using `sekaid new-genesis-from-exported` command. More details in regards to the Hard & Soft forks can be found in the [Infrastructure Overview 2.0](https://blog.kira.network/kira-infrastructure-overview-2-0-b3bf94ba647) article.
 
+It is currently mandatory for ALL validators to vote on upgrade proposals. Example voting commands:
+
+* With KM: `voteYes <UPGRADE-PROPOSAL-ID> validator`
+* Without KM: `sekaid tx customgov proposal vote <UPGRADE-PROPOSAL-ID> 1 --from=$ACCOUNT --chain-id=$NETWORK_NAME --keyring-backend=test --fees=100ukex --yes --log_format=json --broadcast-mode=async --output=json`
+
 ## Networks, Checksums & References
+
+### Testnet-9 (upcoming)
+* Chain Identifier: `testnet-9`
+* Expected Hard Fork Date: `2022-01-07 6:30 PM UTC`
+* Upgrade Proposal Id: `668`
+* Kira Manager Checksum: `0feca1c125f2291596dd115ff2cf720032a7098030f8aa97c164afa9ca79644e`
+* Genesis File Checksum: `TBD`
+* Genesis File Source: [TBD](./testnet-9/genesis.json)
+* Initial Block Height: `TBD`
+* Block Height Reached: `TBA`
 
 ### Testnet-8 (latest)
 * Chain Identifier: `testnet-8`
