@@ -43270,66 +43270,6 @@
         },
         {
           "content": {
-            "@type": "/kira.gov.SetNetworkPropertyProposal",
-            "network_property": "PROPOSAL_END_TIME",
-            "value": {
-              "str_value": "",
-              "value": "259200"
-            }
-          },
-          "description": "Assign value '259200' to property 'proposal_end_time'",
-          "enactment_end_time": "2022-01-03T00:37:28.517476407Z",
-          "exec_result": "",
-          "min_enactment_end_block_height": "858341",
-          "min_voting_end_block_height": "858283",
-          "proposal_id": "665",
-          "result": "VOTE_RESULT_QUORUM_NOT_REACHED",
-          "submit_time": "2022-01-03T00:26:28.517476407Z",
-          "title": "Upserting Network Property 'proposal_end_time'",
-          "voting_end_time": "2022-01-03T00:32:28.517476407Z"
-        },
-        {
-          "content": {
-            "@type": "/kira.gov.SetNetworkPropertyProposal",
-            "network_property": "PROPOSAL_END_TIME",
-            "value": {
-              "str_value": "",
-              "value": "259200"
-            }
-          },
-          "description": "Assign value '259200' to property 'proposal_end_time'",
-          "enactment_end_time": "2022-01-03T00:50:21.750193957Z",
-          "exec_result": "executed successfully",
-          "min_enactment_end_block_height": "858463",
-          "min_voting_end_block_height": "858407",
-          "proposal_id": "666",
-          "result": "VOTE_RESULT_PASSED",
-          "submit_time": "2022-01-03T00:39:21.750193957Z",
-          "title": "Upserting Network Property 'proposal_end_time'",
-          "voting_end_time": "2022-01-03T00:45:21.750193957Z"
-        },
-        {
-          "content": {
-            "@type": "/kira.gov.SetNetworkPropertyProposal",
-            "network_property": "VOTE_QUORUM",
-            "value": {
-              "str_value": "",
-              "value": "25"
-            }
-          },
-          "description": "Assign value '25' to property 'vote_quorum'",
-          "enactment_end_time": "2022-01-06T17:15:24.627610891Z",
-          "exec_result": "executed successfully",
-          "min_enactment_end_block_height": "907521",
-          "min_voting_end_block_height": "867746",
-          "proposal_id": "667",
-          "result": "VOTE_RESULT_PASSED",
-          "submit_time": "2022-01-03T17:10:24.627610891Z",
-          "title": "Upserting Network Property 'vote_quorum'",
-          "voting_end_time": "2022-01-06T17:10:24.627610891Z"
-        },
-        {
-          "content": {
             "@type": "/kira.upgrade.ProposalSoftwareUpgrade",
             "instate_upgrade": false,
             "max_enrolment_duration": "90",

@@ -91,7 +91,8 @@ It is currently mandatory for ALL validators to vote on upgrade proposals. Examp
 #### Post Mortem
 
 > Was expected to be depreciated due to planned hard fork at 4:30 PM 2022-01-07. 
-> During generation of the new genesis file, export tool failed to convert `proposal_end_time` into `minimum_proposal_end_time` and `jail_max_time` into `unjail_max_time`, resulting in the `panic: unknown field "proposal_end_time" & "jail_max_time" in types.NetworkProperties` exception and failure to successfully start SEKAI process
+> During generation of the new genesis file, export tool failed to convert `proposal_end_time` into `minimum_proposal_end_time` and `jail_max_time` into `unjail_max_time`, resulting in the `panic: unknown field "proposal_end_time" & "jail_max_time" in types.NetworkProperties` exception and failure to successfully start SEKAI process.
+> After manually fixing network properties in genesis, new issue was found were old proposals become incompatible with the new version of the chain resulting in `panic: can't unmarshal Any nested proto *types.SetNetworkPropertyProposal: unknown value "PROPOSAL_END_TIME" for enum kira.gov.NetworkProperty`
 
 ### Testnet-7
 * Chain Identifier: `testnet-7`
