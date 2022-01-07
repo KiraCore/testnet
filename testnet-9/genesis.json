@@ -31884,7 +31884,7 @@
         "mischance_rank_decrease_amount": "1",
         "poor_network_max_bank_send": "1000000",
         "proposal_enactment_time": "300",
-        "proposal_end_time": "259200",
+        "minimum_proposal_end_time": "300",
         "unique_identity_keys": "moniker,username",
         "vote_quorum": "25"
       },
