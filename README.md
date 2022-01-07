@@ -75,7 +75,7 @@ It is currently mandatory for ALL validators to vote on upgrade proposals. Examp
 * Expected Hard Fork Date: `2022-01-07 6:30 PM UTC`
 * Upgrade Proposal Id: `668`
 * Kira Manager Checksum: `0feca1c125f2291596dd115ff2cf720032a7098030f8aa97c164afa9ca79644e`
-* Genesis File Checksum: `68a26e2dcdf39596618d5181a632fd1a46802983fd7c89c6380962282e2b24dd`
+* Genesis File Checksum: `0x111567fa0152bc91d72e395d3604510b8425e4b3a9c48cca1e9d019fdde749f8`
 * Genesis File Source: [link](./testnet-9/genesis.json)
 * Initial Block Height: `920527`
 * Block Height Reached: `TBD`
