@@ -75,9 +75,10 @@ It is currently mandatory for ALL validators to vote on upgrade proposals. Examp
 * Expected Hard Fork Date: `2022-01-07 6:30 PM UTC`
 * Upgrade Proposal Id: `668`
 * Kira Manager Checksum: `0feca1c125f2291596dd115ff2cf720032a7098030f8aa97c164afa9ca79644e`
-* Genesis File Checksum: `9c927a78da5e7a45996249055f1254efb4eed2bd3a1e8d898944f0b52b598974`
+* Genesis File Checksum: `68a26e2dcdf39596618d5181a632fd1a46802983fd7c89c6380962282e2b24dd`
 * Genesis File Source: [link](./testnet-9/genesis.json)
 * Initial Block Height: `920527`
+* Block Height Reached: `TBD`
 
 ### Testnet-8
 * Chain Identifier: `testnet-8`
@@ -89,7 +90,8 @@ It is currently mandatory for ALL validators to vote on upgrade proposals. Examp
 
 #### Post Mortem
 
-> To be depreciated due to planned hard fork at 4:30 PM 2022-01-07
+> Was expected to be depreciated due to planned hard fork at 4:30 PM 2022-01-07. 
+> During generation of the new genesis file, export tool failed to convert `proposal_end_time` into `minimum_proposal_end_time`, resulting in the `panic: unknown field "proposal_end_time" in types.NetworkProperties` exception and failure to successfully start SEKAI process
 
 ### Testnet-7
 * Chain Identifier: `testnet-7`
