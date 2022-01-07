@@ -91,7 +91,7 @@ It is currently mandatory for ALL validators to vote on upgrade proposals. Examp
 #### Post Mortem
 
 > Was expected to be depreciated due to planned hard fork at 4:30 PM 2022-01-07. 
-> During generation of the new genesis file, export tool failed to convert `proposal_end_time` into `minimum_proposal_end_time`, resulting in the `panic: unknown field "proposal_end_time" in types.NetworkProperties` exception and failure to successfully start SEKAI process
+> During generation of the new genesis file, export tool failed to convert `proposal_end_time` into `minimum_proposal_end_time` and `jail_max_time` into `unjail_max_time`, resulting in the `panic: unknown field "proposal_end_time" & "jail_max_time" in types.NetworkProperties` exception and failure to successfully start SEKAI process
 
 ### Testnet-7
 * Chain Identifier: `testnet-7`

@@ -31872,7 +31872,7 @@
         "enable_token_blacklist": true,
         "enable_token_whitelist": false,
         "inactive_rank_decrease_percent": "50",
-        "jail_max_time": "1209600",
+        "unjail_max_time": "1209600",
         "max_mischance": "50",
         "max_tx_fee": "1000000",
         "min_identity_approval_tip": "200",
