@@ -70,23 +70,26 @@ It is currently mandatory for ALL validators to vote on upgrade proposals. Examp
 
 ## Networks, Checksums & References
 
-### Testnet-9 (upcoming)
+### Testnet-9 (latest)
 * Chain Identifier: `testnet-9`
 * Expected Hard Fork Date: `2022-01-07 6:30 PM UTC`
 * Upgrade Proposal Id: `668`
 * Kira Manager Checksum: `0feca1c125f2291596dd115ff2cf720032a7098030f8aa97c164afa9ca79644e`
-* Genesis File Checksum: `TBD`
-* Genesis File Source: [TBD](./testnet-9/genesis.json)
-* Initial Block Height: `TBD`
-* Block Height Reached: `TBA`
+* Genesis File Checksum: `9c927a78da5e7a45996249055f1254efb4eed2bd3a1e8d898944f0b52b598974`
+* Genesis File Source: [link](./testnet-9/genesis.json)
+* Initial Block Height: `920527`
 
-### Testnet-8 (latest)
+### Testnet-8
 * Chain Identifier: `testnet-8`
 * Kira Manager Checksum: `0feca1c125f2291596dd115ff2cf720032a7098030f8aa97c164afa9ca79644e`
 * Genesis File Checksum: `0x8b688297b8a6f0ce9924eb163a4c254dfe647fe1b0c0d891cff9457869e650b7`
 * Genesis File Source: [link](./testnet-8/genesis.json)
 * Initial Block Height: `138403`
-* Block Height Reached: `TBA`
+* Block Height Reached: `920527`
+
+#### Post Mortem
+
+> To be depreciated due to planned hard fork at 4:30 PM 2022-01-07
 
 ### Testnet-7
 * Chain Identifier: `testnet-7`
