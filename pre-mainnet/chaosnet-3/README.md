@@ -73,5 +73,5 @@ After your node is running, register as a validator by submitting a pull request
 
 ## Support
 
-- **Telegram**: https://tg.kira.network
+- **Telegram**: https://telegram.kira.network
 - **GitHub Issues**: https://github.com/KiraCore/testnet
