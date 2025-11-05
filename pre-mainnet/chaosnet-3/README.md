@@ -32,11 +32,12 @@ chmod +x bootstrap.sh
 
 ### 2. Join the Network
 
-Download the join script:
+The bootstrap script clones the repository to `/home/km/sekin`. Use the join script from there:
 
 ```bash
-wget -O join-network.sh https://raw.githubusercontent.com/KiraCore/sekin/refs/heads/main/scripts/00-sekaid-join.sh
-chmod +x join-network.sh
+cd /home/km/sekin/scripts
+cp 00-sekaid-join.sh ~/join-network.sh
+cd ~
 ```
 
 Edit `join-network.sh` and add:
@@ -46,6 +47,7 @@ Edit `join-network.sh` and add:
 Then run:
 
 ```bash
+chmod +x join-network.sh
 ./join-network.sh
 ```
 
