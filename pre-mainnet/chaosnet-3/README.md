@@ -6,17 +6,16 @@ Welcome to Chaosnet-3, a pre-mainnet testnet for the KIRA network.
 
 - **Chain ID**: chaosnet-3
 - **Network Type**: Pre-Mainnet
-- **Telegram**: https://tg.kira.network
-- **Genesis SHA256**: `<GENESIS_SHA256_CHECKSUM>`
+- **Telegram**: https://telegram.kira.network
+- **Genesis SHA256**: `cbb1dde1c831a9a4c8467798504be43389d0e9a85b81f63f5796c81258cb79f0`
 
 ## Seed Nodes
 
 Initial seed nodes for connecting to the network:
 
 ```
-<seed_node_1>
-<seed_node_2>
-<seed_node_3>
+63.35.216.144
+18.170.227.4
 ```
 
 ## Deployment
