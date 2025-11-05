@@ -1,0 +1,8 @@
+{
+  "moniker": "your-validator-name",
+  "node_id": "your-node-id",
+  "peer_address": "tcp://<node_id>@<external_ip>:26656",
+  "telegram": "@your-telegram-handle",
+  "website": "https://your-website.com",
+  "twitter": "@your-twitter-handle"
+}
